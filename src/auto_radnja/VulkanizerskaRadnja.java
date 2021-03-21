@@ -39,13 +39,19 @@ public class VulkanizerskaRadnja implements Radnja {
 		if (markaModel == null)
 			return null;
 		
+		AutoGuma g = new AutoGuma();
+		g.setMarkaModel(markaModel);
+		g.setPrecnik(16);
+		g.setSirina(220);
+		g.setVisina(75);
+		
 		LinkedList<AutoGuma> novaLista = new LinkedList<AutoGuma>();
 		
-		for(int i=0; i<gume.size(); i++)
+		for(int i=0; i<gume.size(); i++) {
 		
-			if (gume.get(i).equals(markaModel))
+			if (gume.get(i).equals(g))
 				novaLista.add(gume.get(i));
-			
+		}
 		return novaLista;
 	}
 
